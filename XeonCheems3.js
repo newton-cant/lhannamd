@@ -6428,14 +6428,15 @@ let buttonMessage = {
 image: { url: anu.thumbnail },
 caption: `*| YOUTUBE PLAY |*
 
-${global.themeemoji} Titulo : ${anu.title}
+${global.themeemoji} Title : ${anu.title}
+${global.themeemoji} Ext : Search
 ${global.themeemoji} ID : ${anu.videoId}
-${global.themeemoji} Duração : ${anu.timestamp}
-${global.themeemoji} Views : ${anu.views}
-${global.themeemoji} Postado : ${anu.ago}
-${global.themeemoji} Canal : ${anu.author.name}
-${global.themeemoji} LinkC : ${anu.author.url}
-${global.themeemoji} Descrição : ${anu.description}
+${global.themeemoji} Duration : ${anu.timestamp}
+${global.themeemoji} Viewers : ${anu.views}
+${global.themeemoji} Uploaded : ${anu.ago}
+${global.themeemoji} Author : ${anu.author.name}
+${global.themeemoji} Channel : ${anu.author.url}
+${global.themeemoji} Description : ${anu.description}
 ${global.themeemoji} Url : ${anu.url}`,
 footer: `${global.botname}`,
 buttons: buttons,
@@ -6494,7 +6495,7 @@ break
 case 'ytvd': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-XeonBotInc.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"Pronto", contextInfo:{externalAdReply:{
+XeonBotInc.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"Success", contextInfo:{externalAdReply:{
 title:`${global.botname}`,
 body:`${global.botname}`,
 thumbnail: log0,
