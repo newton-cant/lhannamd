@@ -1,1 +1,1 @@
-worker: sh supra.sh
+trabalhador: sh supra.sh
