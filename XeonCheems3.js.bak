@@ -2255,7 +2255,7 @@ case 'telefone':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let mdssm = await fetchJson(`https://software-search.herokuapp.com/puxar?type=telefone&q=${q}&token=Q9b5wQMcOug3`)
-casas = `              🔍 𝘿𝘼𝘿𝙊𝙎 𝙏𝙀𝙇𝙀𝙁𝙊𝙉𝙀 🔍
+casas = `            🔍 𝘿𝘼𝘿𝙊𝙎 𝙏𝙀𝙇𝙀𝙁𝙊𝙉𝙀 🔍
 
 `
 reply(casas+mdssm.resultado)

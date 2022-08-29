@@ -8114,6 +8114,13 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
 						XeonBotInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
 					})
 					break
+		case 'procurarsticker':{			
+		axios.get(`https://supraz.herokuapp.com/api/stickersearch?quero=${q}&apikey=lhannabot`)
+					.then(({data}) => {
+						XeonBotInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
+					})
+					break					
+					
 case 'waifu': case 'loli':
 					   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
