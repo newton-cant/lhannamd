@@ -8114,11 +8114,12 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
 						XeonBotInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
 					})
 					break
-		case 'procurarsticker':{			
-		axios.get(`https://supraz.herokuapp.com/api/stickersearch?quero=${q}&apikey=lhannabot`)
-					.then(({data}) => {
-						XeonBotInc.sendImageAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
-					})
+		case 'procurarsticker':	{	
+	let datas =	await fetchJson(`https://supraz.herokuapp.com/api/stickersearch?quero=${q}&apikey=lhannabot`)
+	let dddss = datas.sticker[0];
+	//let randoms = dddss[Math.floor(Math.random() * dddss.length)]
+						XeonBotInc.sendImageAsSticker(m.chat, dddss, m, { packname: global.packname, author: global.author })
+		}			
 					break					
 					
 case 'waifu': case 'loli':

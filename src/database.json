@@ -994,6 +994,11 @@
       "afkTime": -1,
       "afkReason": "",
       "limit": 100
+    },
+    "918688891281@s.whatsapp.net": {
+      "afkTime": -1,
+      "afkReason": "",
+      "limit": 100
     }
   },
   "READ": false,
