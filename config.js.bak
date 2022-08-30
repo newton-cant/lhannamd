@@ -49,7 +49,7 @@ global.location = "Brasil" //ur location
 
 //bot bombdy
 global.botname = "Lhanna Bot" //ur bot name
-global.websitex = "https://youtu.be/llz_NZPi5oA" //ur website
+global.websitex = "https://youtube.com/c/SUPRAOFC" //ur website
 global.vidmenu = { url: 'https://a.uguu.se/zlzQZvXH.mp4' } //gif and video menu
 global.packname = "Newton(SupraGoxtosa)\n\n\n\n\n\n\n🐦🐦🐦 "
 global.author = "🦄LhannaBOT"
