@@ -9261,13 +9261,13 @@ break
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Hi ${pushname}`,
-                    description: `Please Choose The Menu\n\n`,
+                    title: `Olá ${pushname}`,
+                    description: `Por favor, escolha o menu\n\n`,
                     buttonText: "Menu",
                     footerText: `${global.botname}`,
                     listType: "SINGLE_SELECT",
                     sections: [{
-								"title": "Initial Features Of Bot 🦄",
+								"title": "Características iniciais do bot 🦄",
 								"rows": [
 									{
 										"title": "Other ☕",
