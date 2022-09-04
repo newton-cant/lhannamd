@@ -58,7 +58,7 @@ global.reactmoji = "😘"
 global.ownertag = ['ur number'] //ur owner tag
 global.ownernummenu = ['ur number'] //ur owner number in menu and all
 global.watermark = "Xeon Bot Inc." //ur watermark
-global.botscript = "https://github.com/Supraofc/supra-api"
+global.botscript = "https://supraz.herokuapp.com/"
 global.linkz1 = "https://chat.whatsapp.com/J0IEWFm9FIA5pzSqWz1kxP"
 global.linkz2 = "https://chat.whatsapp.com/KS6dvOv8AMWLRgZtW0FvRm"
 
