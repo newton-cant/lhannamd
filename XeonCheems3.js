@@ -6291,6 +6291,35 @@ sourceUrl: q
 XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
+
+  case 'editanime':{
+  	if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+  
+texttk = `_Clique no botão abaixo para obter um video aleatório de Anime_`
+let buttons = [
+{buttonId: `editanime`, buttonText: {displayText: 'Proximo ➡️'}, type: 1}
+]
+let buttonMessage = {
+video: {url:`https://supraz.herokuapp.com/api/editanime?apikey=lhannabot`},
+caption: texttk,
+footer: `${botname}`,
+buttons: buttons,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title: `${ownername}`,
+body: `${pushname}`,
+thumbnail: log0,
+mediaType:1,
+mediaUrl: q,
+sourceUrl: q
+}}
+}
+XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
+}
+break
+
+
   case 'tiktoknowm': case 'ttnowm':{
   	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)

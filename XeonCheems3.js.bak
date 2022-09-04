@@ -6291,6 +6291,36 @@ sourceUrl: q
 XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
+
+  case 'editanime':{
+  	if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+  
+texttk = `_Clique no botão abaixo para obter um video aleatório de Anime_`
+let buttons = [
+{buttonId: `ttnowm ${q}`, buttonText: {displayText: 'No Watermark ❌'}, type: 1},
+{buttonId: `ttaud ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
+]
+let buttonMessage = {
+video: {url:`https://supraz.herokuapp.com/api/editanime?apikey=lhannabot`},
+caption: texttk,
+footer: `${botname}`,
+buttons: buttons,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title: `${ownername}`,
+body: `${pushname}`,
+thumbnail: log0,
+mediaType:1,
+mediaUrl: q,
+sourceUrl: q
+}}
+}
+XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
+}
+break
+
+
   case 'tiktoknowm': case 'ttnowm':{
   	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
@@ -9271,37 +9301,37 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"rows": [
 									{
 										"title": "Other ☕",
-										"description": "Displays The List Of Other Features",
+										"description": "Exibe a lista de outros recursos",
 										"rowId": `${prefix}othermenu`
 									}
 								]
 							},
 							{
-								"title": "Bot Features ❤️",
+								"title": "Recursos de bot ❤️",
 								"rows": [
 									{
 										"title": "All Menu 🥀",
-										"description": "Displays The List Of All The Features!",
+										"description": "Exibe a lista de todos os recursos!",
 										"rowId": `${prefix}allmenu`
 									},
 									{
 										"title": "Owner Menu 💠",
-										"description": "Displays The List Of Owner Features",
+										"description": "Exibe a lista de recursos do proprietário",
 										"rowId": `${prefix}ownermenu`
 										},
 									{
 										"title": "Group Menu ✨",
-										"description": "Displays The List Of Main Features",
+										"description": "Exibe a lista de recursos principais",
 										"rowId": `${prefix}groupmenu`
 										},
 										{
 										"title": "Rpg Menu 🏞️",
-										"description": "Displays The List Of Rpg Features",
+										"description": "Exibe a lista de recursos de RPG",
 										"rowId": `${prefix}rpgmenu`
 										},
 										{
 										"title": "Maker Menu 🌈",
-										"description": "Displays The List Of Logo Making Features",
+										"description": "Exibe a lista de recursos de criação de logotipo",
 										"rowId": `${prefix}indomenu`
 									},
 									{
