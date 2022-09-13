@@ -273,6 +273,7 @@ const isLeveling = m.isGroup ? _leveling.includes(from) : false
 const isAutoStick = _autostick.includes(from)
 const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
 const isSewa = _sewa.checkSewaGroup(from, sewa)
+const autoRespost = budy.slice(0).trim().split(/ +/).shift().toLowerCase()
 const Autoreply = m.isGroup ? autorep.includes(from) : true
 autoreadsw = true
 // Quoted
@@ -1590,6 +1591,15 @@ const reactionMessage = {
                 }
                 
 //cases starts here
+if (!mek.key.fromMe) {
+switch(autoRespost) {
+
+
+
+}
+
+
+
 switch(command) {
 	
 case 'sc': case 'script': case 'donate': case 'donate': case 'cekupdate': case 'updatebot': case 'cekbot': case 'sourcecode': {
@@ -9189,7 +9199,7 @@ displayText: 'Criador 😈',
 id: 'owner'
 }
 }]
-let txt = `*「 ${global.ownername} Broadcast」*\n\n${text}`
+let txt = `*「 ${global.ownername} informa bot」*\n\n${text}`
 XeonBotInc.send5ButImg(i, txt, `${global.botname}`, log0, btn, thum)
 }
 //replay(`Successfully Sent Broadcast To ${anu.length} Group`)
@@ -10967,6 +10977,25 @@ My family
 And all friends who helped assemble this sexy script !!!`)
 break
 default:
+
+  
+if (budy.includes("lhanna")){
+const dkk = fs.readFileSync('./src/sticker/lhanna.webp');
+	XeonBotInc.sendImageAsSticker(m.chat, dkk, m, { packname: global.packname, author: global.author })
+}
+}
+if (budy.includes("Lhanna")){
+const dkk = fs.readFileSync('./src/sticker/lhanna.webp');
+	XeonBotInc.sendImageAsSticker(m.chat, dkk, m, { packname: global.packname, author: global.author })
+}
+if (budy.includes("supra")){
+const dkk = fs.readFileSync('./src/sticker/supra.webp');
+	XeonBotInc.sendImageAsSticker(m.chat, dkk, m, { packname: global.packname, author: global.author })
+}
+if (budy.includes("Supra")){
+const dkk = fs.readFileSync('./src/sticker/supra.webp');
+	XeonBotInc.sendImageAsSticker(m.chat, dkk, m, { packname: global.packname, author: global.author })
+}
 if (budy.startsWith('=>')) {
 if (!isCreator) return reply(mess.owner)
 function Return(sul) {
