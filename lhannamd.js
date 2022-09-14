@@ -6329,6 +6329,34 @@ XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
 
+case 'hentaivideo': case 'hentaivid':{
+  	if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+  
+texttk = `_Clique no botão abaixo para obter um video aleatório de hentai_`
+let buttons = [
+{buttonId: `hentaivideo`, buttonText: {displayText: 'Proximo ➡️'}, type: 1}
+]
+ggg = await fetchJson(`https://supraz.herokuapp.com/api/hentaivideo?apikey=lhannabot`)
+let buttonMessage = {
+video: {url: ggg.resultado.video_1},
+caption: texttk,
+footer: `${botname}`,
+buttons: buttons,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title: `${ownername}`,
+body: `${pushname}`,
+thumbnail: log0,
+mediaType:1,
+mediaUrl: q,
+sourceUrl: q
+}}
+}
+XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
+}
+break
+
 
   case 'tiktoknowm': case 'ttnowm':{
   	if (isBan) return reply(mess.ban)
@@ -7603,17 +7631,7 @@ let bjif = await GIFBufferToVideoBuffer(bjf)
                     return reply('error..')
                                     })
 break
-case 'hentaivid': case 'hentaivideo': {
-	                        	            	   if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-	if (!m.isGroup) return replay(mess.group)
-if (!AntiNsfw) return reply(mess.nsfw)
-                reply(mess.wait)
-                anu = await hentai()
-                result912 = anu[Math.floor(Math.random(), anu.length)]
-                XeonBotInc.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `${dogeemoji} Title : ${result912.title}\n${dogeemoji} Category : ${result912.category}\n${dogeemoji} Mimetype : ${result912.type}\n${dogeemoji} Views : ${result912.views_count}\n${dogeemoji} Shares : ${result912.share_count}\n${dogeemoji} Source : ${result912.link}\n${dogeemoji} Media Url : ${result912.video_1}` }, { quoted: m })
-            }
-            break
+
 case 'trap' :
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)

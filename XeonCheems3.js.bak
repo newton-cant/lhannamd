@@ -1719,13 +1719,13 @@ if (isBanChat) return reply(mess.banChat)
 reply(` Don't forget to join yeah!
 
 *GROUP 1*
-https://chat.whatsapp.com/HYj9wu5Jrv6CROxeQbHoS
+https://chat.whatsapp.com/HYj9wu5Jrv6CROxQbHoS
 
 *GROUP 2*
-https://chat.whatsapp.com/LS1Xx3fSqg7FpSSjKWhL5
+https://chat.whatsapp.com/LS1Xx3fSqgFpSSjKWhL5
 
 *GROUP 3*
-https://chat.whatsapp.com/EcycNbJFCVT5ZsGxIGkqd`)
+https://chat.whatsapp.com/EcycNbJFCVT5ZGxIGkqd`)
 break
 
 
@@ -6312,6 +6312,34 @@ let buttons = [
 ]
 let buttonMessage = {
 video: {url:`https://supraz.herokuapp.com/api/editanime?apikey=lhannabot`},
+caption: texttk,
+footer: `${botname}`,
+buttons: buttons,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title: `${ownername}`,
+body: `${pushname}`,
+thumbnail: log0,
+mediaType:1,
+mediaUrl: q,
+sourceUrl: q
+}}
+}
+XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
+}
+break
+
+case 'hentaivideo': case 'hentaivid':{
+  	if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+  
+texttk = `_Clique no botão abaixo para obter um video aleatório de hentai_`
+let buttons = [
+{buttonId: `hentaivideo`, buttonText: {displayText: 'Proximo ➡️'}, type: 1}
+]
+ggg = await fetchJson(`https://supraz.herokuapp.com/api/hentaivideo?apikey=lhannabot`)
+let buttonMessage = {
+video: {url: ggg.resultado.video_1},
 caption: texttk,
 footer: `${botname}`,
 buttons: buttons,

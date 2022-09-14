@@ -93,7 +93,7 @@ if (mek.key && mek.key.remoteJid === 'status@broadcast') return
 if (!XeonBotInc.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
 if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
 m = smsg(XeonBotInc, mek, store)
-require("./XeonCheems3")(XeonBotInc, m, chatUpdate, store)
+require("./lhannamd")(XeonBotInc, m, chatUpdate, store)
 } catch (err) {
 console.log(err)
 }
