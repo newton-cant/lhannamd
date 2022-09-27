@@ -41,7 +41,7 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
-global.owner = ['ur number'] //ur owner number
+global.owner = ['559391919748'] //ur owner number
 global.ownername = "SupraOfc"
 global.ytname = "YT: SUPRA OFC" //ur yt chanel name
 global.socialm = "GitHub: SupraOfc " //ur github or insta name
@@ -51,7 +51,7 @@ global.location = "Brasil" //ur location
 global.botname = "Lhanna Bot" //ur bot name
 global.websitex = "https://youtube.com/c/SUPRAOFC" //ur website
 global.vidmenu = { url: 'https://a.uguu.se/zlzQZvXH.mp4' } //gif and video menu
-global.packname = "Newton(SupraGoxtosa)\n\n\n\n\n\n\n🐦🐦🐦 "
+global.packname = "Newton(SupraGoxtosa)\n\n\n\n\n\nchama:\n+55 93 9191-9748 "
 global.author = "🦄LhannaBOT"
 global.themeemoji = "🐶"
 global.reactmoji = "😘"

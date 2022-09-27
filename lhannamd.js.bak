@@ -1622,7 +1622,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
             { urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
             { urlButton: { displayText: `Site Api 🍜`, url: `${botscript}` } },
             { quickReplyButton: { displayText: `Supra 📕`, id: 'al'} },
-            { quickReplyButton: { displayText: `List Menu 🍢`, id: 'listamenu'} },
+            { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
             { quickReplyButton: { displayText: `Criador 🤣`, id: 'owner'} }
             ]
                         }
@@ -9292,7 +9292,7 @@ break
                 }
             }
             break
-                case 'listamenu': {
+                case 'command': {
                 	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -9316,7 +9316,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 								"title": "Recursos de bot ❤️",
 								"rows": [
 									{
-										"title": "Todos Comandos 🥀",
+										"title": "All Menu 🥀",
 										"description": "Exibe a lista de todos os recursos!",
 										"rowId": `${prefix}allmenu`
 									},
