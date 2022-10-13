@@ -44,7 +44,7 @@ const {
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
 async function startsupraz() {
-console.log(color(figlet.textSync('Lhanna Bot-MD', {
+console.log(color(figlet.textSync('Cheems Bot-MD', {
 		font: 'Pagga',
 		horizontalLayout: 'default',
 		vertivalLayout: 'default',
