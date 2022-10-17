@@ -8160,10 +8160,10 @@ case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite'
                 case 'telesticker':{
                    let suprafc = await fetchJson(`https://supraz.herokuapp.com/api/telesticker?url=https://t.me/addstickers/Biankesse_by_fStikBot&apikey=lhannabot`)
                    let ini_sticker = suprafc.sticker[0];
-    //                for (sticker_ in ini_sticker) {
+    /                for (sticker_ in ini_sticker) {
                //         ini_buffer = await getBuffer(ini_sticker[sticker_])
-	supraz.sendImageAsSticker(m.chat, ini_sticker, m, { packname: global.packname, author: global.author })
-		}		
+	supraz.sendImageAsSticker(m.chat, ini_sticker[sticker_], m, { packname: global.packname, author: global.author })
+		}		}
                     break					
 										
 																				
