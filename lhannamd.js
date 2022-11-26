@@ -31,7 +31,7 @@ const imgbbUploader = require('imgbb-uploader')
 const primbon = new Primbon()
 const { isLimit, limitAdd, getLimit, giveLimit, addBalance, kurangBalance, getBalance, isGame, gameAdd, givegame, cekGLimit } = require('./lib/limit.js');
 const emoji = new EmojiAPI()
-const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
+const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, simih, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
 const { aiovideodl } = require('./lib/scraper.js')
 const cheerio = require ("cheerio");
 const textpro = require('./lib/textpro')
@@ -248,6 +248,7 @@ const antiWame = m.isGroup ? ntwame.includes(from) : false
 const antiToxic = m.isGroup ? nttoxic.includes(from) : false
 const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
+const isSimi = m.isGroup ? simih.includes(from) : false
 const welcm = m.isGroup ? wlcm.includes(from) : false
 const GcRvk = m.isGroup ? gcrevoke.includes(from) : false
 const isLeveling = m.isGroup ? _leveling.includes(from) : false
@@ -6246,42 +6247,7 @@ sourceUrl: args[0]
 }
 supraz.sendMessage(from, buttonMessage, {quoted:m})
 }
-break
-  case 'tiktok':{
-  	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
-  if (!q) return reply('Where is the link?')
-  reply(mess.wait)
-  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-   const musim_rambutan = await suprazTiktok(`${q}`).catch(e => {
- reply(mess.error) 
-} )
-   console.log(musim_rambutan)
-   const xeontiktokop = musim_rambutan.result.watermark
-texttk = `Wanna download no watermark or audio?
-_Please choose the button below_`
-let buttons = [
-{buttonId: `ttnowm ${q}`, buttonText: {displayText: 'No Watermark ❌'}, type: 1},
-{buttonId: `ttaud ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
-]
-let buttonMessage = {
-video: {url:xeontiktokop},
-caption: texttk,
-footer: `${botname}`,
-buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title: `${ownername}`,
-body: `${pushname}`,
-thumbnail: log0,
-mediaType:1,
-mediaUrl: q,
-sourceUrl: q
-}}
-}
-supraz.sendMessage(from, buttonMessage, {quoted:m})
-}
-break
+
 
   case 'editanime':{
   	if (isBan) return reply(mess.ban)
@@ -6339,18 +6305,15 @@ supraz.sendMessage(from, buttonMessage, {quoted:m})
 break
 
 
-  case 'tiktoknowm': case 'ttnowm':{
+  case 'tiktok': case 'ttnowm':{
   	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
   if (!q) return reply('Where is the link?')
   reply(mess.wait)
-  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-   const musim_rambutan = await suprazTiktok(`${q}`).catch(e => {
- reply(mess.error) 
-} )
-   console.log(musim_rambutan)
-   const xeonytiktoknowm = musim_rambutan.result.nowatermark
-    supraz.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
+//   console.log(musim_rambutan)
+   let videobaixar = await fetchJson(`https://supraz.herokuapp.com/api/tiktok?url=${q}&apikey=lhannabot`)
+   parabaixar = videobaixar.video;
+    supraz.sendMessage(from, { video: { url: parabaixar }, caption: "Aí seu vídeo👍" }, { quoted: m })
    }
   break
   case 'tiktokaudio':

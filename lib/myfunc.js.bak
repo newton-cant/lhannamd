@@ -71,12 +71,6 @@ exports.getBuffer = async (url, options) => {
 	}
 }
 
-exports.simih = simih = async (text) => {
-anu = await fetchJson(`https://supraz.herokuapp.com/api/simisimi?texto=${text}&apikey=supraz`)
-return anu.fala
-}
-
-
 exports.fetchJson = async (url, options) => {
     try {
         options ? options : {}
