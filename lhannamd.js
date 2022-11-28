@@ -91,6 +91,15 @@ const {
 } = require("dhn-api");
 const _ = require('lodash')
 const yargs = require('yargs/yargs')
+
+const {
+  ytDonlodMp3,
+  ytDonlodMp4,
+  ytPlayMp3,
+  ytPlayMp4,
+  ytSearch
+} = require("./lib/utils/yt");
+
 var low
 try {
   low = require('lowdb')
@@ -6404,16 +6413,22 @@ reply("Error link!")
 }
 }
 break
+
+
+
+
 case 'music': case 'play': case 'song': case 'ytplay': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let yts = require("yt-search")
 let search = await yts(text)
-let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-let ytvc = await hx.youtube(anu.url)
+let anu = search.videos[0];
+let audiob = await ytPlayMp3(text)
+let videob = await ytPlayMp3(text)
+//let ytvc = await hx.youtube(anu.url)
 let buttons = [
-{buttonId: `ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `ytvd ${videob.baixar}`, buttonText: {displayText: '► Video'}, type: 1},
+{buttonId: `ytad ${audiob.baixar}`, buttonText: {displayText: '♫ Audio'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
