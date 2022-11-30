@@ -98,7 +98,7 @@ const {
   ytPlayMp3,
   ytPlayMp4,
   ytSearch
-} = require("./lib/utils/yt");
+} = require("./lib/utils/yt.js");
 
 var low
 try {
